@@ -1,0 +1,10 @@
+trigger:
+- main   # pipeline runs when code is pushed to main branch
+
+pool:
+  vmImage: 'ubuntu-latest'   # hosted agent provided by Azure
+
+steps:
+- checkout: self
+- script: echo "Jenkins Pipeline Success"
+  displayName: 'Run sample script'
